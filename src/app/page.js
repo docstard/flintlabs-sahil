@@ -13,7 +13,11 @@ const getAddressMetrics = async (chain, contractAddress, pastHours) => {
     contractAddress,
     pastHours,
   };
-  const res = await fetch("http://localhost:3000/api", {
+  const url =
+    process.env.NODE_ENV === "production"
+      ? "https://flintlabs-sahil-production.up.railway.app/api"
+      : "http://localhost:3000/api";
+  const res = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
