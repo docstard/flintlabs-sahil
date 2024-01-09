@@ -37,7 +37,7 @@ const ChartContainer = ({ title, contractMetrics }) => {
           <Line
             type="monotone"
             dataKey="point"
-            stroke="#ffffff"
+            stroke="#4280ff"
             strokeWidth={2}
           />
         </LineChart>
